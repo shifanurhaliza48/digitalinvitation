@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Undangan Pernikahan</h1>
+        <p>Dengan hormat kami mengundang Bapak/Ibu/Saudara/i untuk hadir dalam acara pernikahan kami:</p>
+
+        <div class="names">
+            <h2>[Nama Mempelai Pria] & [Nama Mempelai Wanita]</h2>
+        </div>
+
+        <div class="details">
+            <p>Pada:</p>
+            <p id="tanggal-waktu"></p>
+            <p>Bertempat di: [Alamat Lokasi Acara]</p>
+        </div>
+
+        <div class="countdown">
+            <p>Menuju Hari Bahagia:</p>
+            <p id="hitung-mundur"></p>
+        </div>
+
+        <h3>Lokasi Acara</h3>
+        <div id="map"></div>
+
+        <audio id="background-audio" loop autoplay>
+            <source src="kusuma_wijaya.mp3" type="audio/mpeg">
+            Browser Anda tidak mendukung elemen audio.
+        </audio>
+
+        <button id="play-pause-button">Putar/Jeda Musik</button>
+
+        <div class="form-section">
+            <h3>Kirim Ucapan & Konfirmasi Kehadiran</h3>
+            <form id="rsvp-form">
+                <label for="nama">Nama Anda:</label>
+                <input type="text" id="nama" name="nama" required>
+                
+                <label for="ucapan">Ucapan & Doa Terbaik:</label>
+                <textarea id="ucapan" name="ucapan" rows="5" required></textarea>
+                
+                <button type="submit" id="submit-button">Kirim</button>
+            </form>
+        </div>
+
+        <p class="footer">Kami nantikan kehadiran Anda.</p>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
